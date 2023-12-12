@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey&family=Lato:wght@700&family=Open+Sans+Condensed:wght@700&family=PT+Sans&family=Roboto:wght@100&display=swap');
+ body {  
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    background-image: url(../img/maybehome.jpg);
+ }
+
+ .word{   
+    left: -5%;   
+    margin-top: 30pt;
+    position: relative;
+ }
+ 
+#first{   
+   font-family: 'Roboto', sans-serif;
+   transform: translate(6%, -8%);
+   color: rgba(255, 255, 255, 0.904);
+   font-size:  60px; 
+   padding-top: 5%;   
+   margin-left:-10pt;
+   display: flex; 
+   position: relative;
+   justify-content: center;
+   align-items: center;
+   animation: fadeIn linear 1.2s;
+   -webkit-animation: fadeIn linear 1.2s;
+   -moz-animation: fadeIn linear 1.2s;
+   -o-animation: fadeIn linear 1.2s;
+   -ms-animation: fadeIn linear 1.2s;
+ }
+ 
+ 
+ .word-name{
+   font-family: 'Roboto', sans-serif; 
+   color: white; 
+   font-weight: bolder;    
+   font-size: calc(4vw + 4vh + 2vmin);   
+   margin-top: -3%;   
+   margin-left: 40%;
+   margin-right: 40%;
+   animation: fadeIn linear 2s;
+   display: flex;
+   justify-content: center;
+   -webkit-animation: fadeIn linear 2s;
+   -moz-animation: fadeIn linear 2s;
+   -o-animation: fadeIn linear 2s;
+   -ms-animation: fadeIn linear 2s;  
+   align-items: center;
+ }
+ 
+ #second{
+    display: inline-block;
+    border-bottom: white 1px solid; 
+    text-align: center;
+ }
+ @keyframes fadeIn {
+   0% {opacity:0;}
+   100% {opacity:1;}  
+ }
+ 
+ @-moz-keyframes fadeIn {
+   0% {opacity:0;}
+   100% {opacity:1;}
+ }
+ 
+ @-webkit-keyframes fadeIn {
+   0% {opacity:0;}
+   100% {opacity:1;}
+ }
+ 
+ @-o-keyframes fadeIn {
+   0% {opacity:0;}
+   100% {opacity:1;}
+ }
+ 
+ @-ms-keyframes fadeIn {
+   0% {opacity:0;}
+   100% {opacity:1;}
+ }
+ 
+ .row label{
+    font-family: 'PT Sans', sans-serif;
+   width:100%;
+   color: white;
+   left:0%; 
+   font-size: 14pt; 
+   margin-top:2%;
+   display: flex; 
+   align-items: center;
+   justify-content: center; 
+   animation: fadeIn linear 2s;
+   -webkit-animation: fadeIn linear 2s;
+   -moz-animation: fadeIn linear 2s;
+   -o-animation: fadeIn linear 2s;
+   -ms-animation: fadeIn linear 2s;  
+   align-items: center;
+}   
+
+.row label a {
+   color: white;  
+}
+
+.row label a:hover{
+   color:rgb(252, 239, 237)
+}
+ 
+
+.row label a:focus{
+   color:rgb(252, 239, 237)
+}
+ 
+.label-bt::after{
+   content: "";
+   position:absolute;
+   left:0px; 
+   display:block;
+   bottom: 1.5px;
+   width: 100%;
+   height:100%; 
+   border-bottom:white 1px solid; 
+   transform: scale(0,1);  
+} 
+
+.sound{
+ transform: translate(10, -20);
+}
+ 

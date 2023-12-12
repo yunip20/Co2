@@ -1,0 +1,44 @@
+{% extends "base.html" %} 
+{% block title %}Sign up{% endblock %}  
+
+{% block content %} 
+<form method="POST">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
+    <h1 class="animationtext" style="position:relative; top:-15px;font-size:60px;">WELCOME!</h1> 
+    <p  id="text">
+        <span style="font-size: 30px; top:-40px"> Small steps can save the planet.
+        </span> 
+    </p>
+    <div class="form-group" >
+        <input type="email" class="form-control" id="email" name="email" placeholder=" "
+        style=border:2pxsolidwhite;background:transparent autocomplete="off"/>
+        <label for="email" class="label-name"><span class="content-name">Email Address</span></label> 
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" id="pw" name="pw" placeholder=" "
+        style=border:2pxsolidwhite;background:transparent autocomplete="off"/>
+        <label for="pw" class="label-name"><span class="content-name">Password</span></label>
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" id="pw2" name="pw2" placeholder=" "
+        style=border:2pxsolidwhite;background:transparent autocomplete="off"/>
+        <label for="pw2" class="label-name"><span class="content-name">Confirm Password</span></label>
+    </div>
+    <div class="form-group"> 
+        <input type="text" class="form-control" id="firstName" name="firstName" placeholder=" "
+        style=border:2pxsolidwhite;background:transparent autocomplete="off"/>
+       <label for="firstName" class="label-name"> <span class="content-name">First Name</span></label> 
+    </div> 
+    <div class="form-group">
+        <input type="text" class="form-control" id="lastName" name="lastName" placeholder=" "
+        style=border:2pxsolidwhite;background:transparent autocomplete="off"/>
+        <label for="lastName" class="label-name"><span class="content-name">Last Name</span></label>
+    </div>
+    <br />
+    <div class="row">
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
+    <button  onclick="location.href='login'" type="button" class="btn btn-outline-primary" id="b1" border-radius=500
+    >Log In</button>
+    </div> 
+</form>
+{% endblock %}

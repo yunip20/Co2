@@ -1,0 +1,250 @@
+{% extends "base.html" %} 
+{% block title %}Create Report{% endblock %} 
+
+{% block content%}   
+<link href="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" rel = "stylesheet">
+ <link rel="stylesheet" type="text/css" href="../static/css/style3.css"/>  
+<body>   
+    <section id = "General">
+        <div class = "everything">
+            <h1>General Information</h1>
+            <div class = "content" id = "one"> 
+            <form class = "surveyform">
+                <div class ="accordian">
+                    <div class = "accordion-item" id ="question1">
+                        <a class = "accordian-link">
+                            Please Enter the Date That This Report is Being Generated For:   
+                        </a>
+                        <div class ="answer">
+                            <input type="date" class="form-control" id="date" name="date"   
+                            style=border:2pxsolidwhite;background:transparent placeholder=" " autocomplete="off"/> 
+                        </div>
+                    </div>
+                    <div class = "accordion-item" id ="question2">
+                        <a class = "accordian-link">
+                             Enter Household Number:  
+                        </a>
+                        <div class ="answer">
+                            <input type="number" class="form-control" id="household" name="household"   
+                            style=border:2pxsolidwhite;background:transparent placeholder=" " autocomplete="off"/>  
+                        </div>
+                    </div>
+                    <div class = "accordion-item" id ="question3">
+                        <a class = "accordian-link">
+                            Enter the Zipcode of Your Current Address. 
+                        </a>
+                        <div class ="answer">
+                            <input  type="number" class="form-control" id="address" name="address"   
+                            style=border:2pxsolidwhite;background:transparent placeholder=" " autocomplete="off"/> 
+                            <div class= "buttons"> 
+                                <br>  
+                                <br>
+                                <button type="submit" class="btn" id="save" border-radius=500>Save Before Next Section</button>  
+                              </div> 
+                        </div>
+                    </div>
+                </div> 
+                <div class = "arrow">
+                    <a href= "#HomeEnergy">
+                        <span class="link"><img class = arrow src="../static/img/next.svg" width="35" height="35"> </span>
+                      </a>
+                     </div> 
+            </form> 
+            </div> 
+         </div> 
+    </section>   
+
+    <section id = "HomeEnergy">  
+        <div class="everything">
+            <h1>Home Energy</h1>   
+        <div class = "content">  
+        <form class = "surveyform">  
+            <div class ="accordian">
+                <div class = "accordion-item" id ="question1">
+                    <a class = "accordian-link">
+                        Please Select Your Household's Primary Source of Energy:   
+                    </a>
+                    <div class ="answer">
+                        <select name="primarySource" id="primarySource" style=border:2pxsolidwhite;background:transparent  placeholder=" ">
+                            <option value="">--Please choose an option--</option>
+                            <option value="ElectricHeat">Electric Heat</option>
+                            <option value="FuelOil">Fuel Oil</option>
+                            <option value="NaturalGas">Natural Gas</option>
+                            <option value="Propane">Propane</option> 
+                        </select>  
+                    </div>
+                </div>
+                <div class = "accordion-item" id ="question2">
+                    <a class = "accordian-link">
+                        Please enter the amount of natural gas (in dollars) your house consumes in a month. If you are unsure, 
+                        type '23' (which is the average amount in the US):  
+                    </a>
+                    <div class ="answer">
+                        <input type="text" class="form-control" id="answer" name="answer"   
+                        style=border:2pxsolidwhite;background:transparent placeholder=" " autocomplete="off"/> 
+                    </div>
+                </div>
+                <div class = "accordion-item" id ="question3">
+                    <a class = "accordian-link">
+                        Please enter the amount of electricity (in dollars) your house consumes in a month. If you are unsure, 
+                        type '44' (which is the average amount in the US):  
+                    </a>
+                    <div class ="answer">
+                        <input type="text" class="form-control" id="answer" name="answer"   
+                        style=border:2pxsolidwhite;background:transparent placeholder=" " autocomplete="off"/> 
+                    </div>
+                </div>
+                <div class = "accordion-item" id ="question3">
+                    <a class = "accordian-link">
+                        Please enter the amount of fuel oil (in dollars) your house consumes in a month. If you are unsure, 
+                        type '72' (which is the average amount in the US):  
+                    </a>
+                    <div class ="answer">
+                        <input type="text" class="form-control" id="answer" name="answer"   
+                        style=border:2pxsolidwhite;background:transparent placeholder=" " autocomplete="off"/> 
+                    </div>
+                </div>
+                <div class = "accordion-item" id ="question3">
+                    <a class = "accordian-link">
+                        Please enter the amount of propane (in dollars) your house consumes in a month. If you are unsure, 
+                        type '32' (which is the average amount in the US):  
+                    </a>
+                    <div class ="answer">
+                        <input type="text" class="form-control" id="answer" name="answer"   
+                        style=border:2pxsolidwhite;background:transparent placeholder=" " autocomplete="off"/> 
+                        <div class= "buttons"> 
+                            <br>  
+                            <br>
+                            <button type="submit" class="btn" id="save" border-radius=500>Save Before Next Section</button>  
+                          </div> 
+                    </div>
+                </div>
+            </div> 
+            <div class = "arrow">
+                <a href="#Vehicles">
+                    <span class="link"><img class = arrow src="../static/img/next.svg" width="35" height="35"> </span>
+                  </a>
+                 </div>
+        </form>  
+        </div> 
+     </div> 
+    </section> 
+ 
+    <section id = "Vehicles">
+        <div class ="everything"><h1>Vehicle Usage</h1>  
+            <div class = "content">  
+            <form class = "surveyform">  
+                <div class ="accordian">
+                    <div class = "accordion-item" id ="question1">
+                        <a class = "accordian-link">
+                            Please Add All Vehicles Used In Your Household.
+                        </a> 
+                        <div class ="answer">  
+                            <ul id="fieldList">
+                                <li>Vehicle #1</li>
+                                <li>Please Enter the License Plate Number for All Vehicles Your Household Uses:
+                                  <input type="text" class="form-control" id="license" name="license"   
+                                  style=border:2pxsolidwhite;background:transparent placeholder=" " autocomplete="off" />
+                                </li>
+                                <li>Please Enter How Many Miles You Drive This Vehicle Per Week:
+                                    <input type="text" class="form-control" id="mpw" name="mpw"   
+                                    style=border:2pxsolidwhite;background:transparent placeholder=" " autocomplete="off" />
+                                </li>
+                                <li>Please Enter the Gas Mileage for This Vehicle In Miles Per Gallon:
+                                    <input type="text" class="form-control" id="mpg" name="mpg"   
+                                    style=border:2pxsolidwhite;background:transparent placeholder=" " autocomplete="off" />
+                                </li>
+                              </ul>  
+                              <div class= "buttons">
+                                <button id="addMore" class = "btn" border-radius=500>Add More Vehicles</button> 
+                                <br>  
+                                <br>
+                                <button type="submit" class="btn" id="save" border-radius=500>Save Before Next Section</button>  
+                              </div> 
+                        </div>
+                    </div> 
+                <div class = "arrow">
+                    <a href="#Waste">
+                        <span class="link"><img class = arrow src="../static/img/next.svg" width="35" height="35"> </span>
+                      </a>
+                     </div> 
+            </form>
+         </div> </div> 
+    </section>
+
+    <section id = "Waste">
+        <div class="everything"> 
+            <h1>Waste</h1>  
+        <div class = "content"  >  
+        <form class = "surveyform"  >  
+            <div class ="accordian">
+                <div class = "accordion-item" id ="question1">
+                    <a class = "accordian-link">
+                        Please Indicate Whether Your Household Recycles Aluminum And Steel Cans By Selecting 'Yes' Or 'No':  
+                    </a>
+                    <div class ="answer">
+                        <select name="primarySource" id="primarySource" style=border:2pxsolidwhite;background:transparent  placeholder=" ">
+                            <option value="">--Please choose an option--</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option> 
+                        </select>  
+                    </div>
+                </div>
+                <div class = "accordion-item" id ="question2">
+                    <a class = "accordian-link">
+                        Please Indicate Whether Your Household Recycles Plastic By Selecting 'Yes' Or 'No':  
+                    </a>
+                    <div class ="answer">
+                        <select name="primarySource" id="primarySource" style=border:2pxsolidwhite;background:transparent  placeholder=" ">
+                            <option value="">--Please choose an option--</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option> 
+                        </select>  
+                    </div>
+                </div>
+                <div class = "accordion-item" id ="question3">
+                    <a class = "accordian-link">
+                        Please Indicate Whether Your Household Recycles Glass By Selecting 'Yes' Or 'No':   
+                    </a>
+                    <div class ="answer">
+                        <select name="primarySource" id="primarySource" style=border:2pxsolidwhite;background:transparent  placeholder=" ">
+                            <option value="">--Please choose an option--</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option> 
+                        </select>  
+                    </div>
+                </div>
+                <div class = "accordion-item" id ="question3">
+                    <a class = "accordian-link">
+                        Please Indicate Whether Your Household Recycles Newspaper By Selecting 'Yes' Or 'No':   
+                    </a>
+                    <div class ="answer">
+                        <select name="primarySource" id="primarySource" style=border:2pxsolidwhite;background:transparent  placeholder=" ">
+                            <option value="">--Please choose an option--</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option> 
+                        </select>  
+                    </div>
+                </div>
+                <div class = "accordion-item" id ="question3">
+                    <a class = "accordian-link">
+                        Please Indicate Whether Your Household Recycles Magazines By Selecting 'Yes' Or 'No':   
+                    </a>
+                    <div class ="answer">
+                        <select name="primarySource" id="primarySource" style=border:2pxsolidwhite;background:transparent  placeholder=" ">
+                            <option value="">--Please choose an option--</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option> 
+                        </select>   
+                        <br>  
+                        <br>
+                        <input type="submit">  
+                    </div> 
+                </div> 
+            </div>  
+        </form>
+     </div> 
+        </div> 
+    </section>
+</body>  
+{% endblock %}

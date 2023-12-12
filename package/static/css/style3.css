@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey&family=Lato:wght@700&family=Open+Sans+Condensed:wght@700&family=PT+Sans&family=Roboto:wght@100&display=swap');
+ 
+ 
+ *,
+ *::before,
+ *::after{
+     margin:0%;
+     padding:0%; 
+     box-sizing: inherit;
+ } 
+ html,body{
+    background-image: url(../img/maybehome.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;   
+    margin:0; 
+    padding:0; 
+    height:100%; 
+ }
+ 
+section{
+    width: 100%;    
+    height: inherit;
+    margin: 0;
+    margin-top: 3%;
+    padding: 0;
+    display: block;
+    align-items: center;
+    justify-content: center;  
+    position: relative; 
+}       
+
+.everything{
+    height:  inherit;
+    display: inline-block; 
+    margin-right: 15%;
+    margin-left: 15%;
+    padding: 10%;   
+    position: relative; 
+ }
+
+ 
+ h1{
+  font-family: 'Roboto', sans-serif; 
+   color: rgba(255, 255, 255, 0.904);
+   font-size:  50px;   
+   margin-bottom: 10%;
+   position: relative;  
+   text-align: center;   
+} 
+
+.content{
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    width: 100%;   
+    height: inherit
+}     
+
+.surveyform{
+     width:100%;
+     max-width: 80rem; 
+     padding: 0 1.5rem;   
+     background-color: white;
+     opacity: 0.8; 
+     margin-top: -5%;  
+     border-radius: 2%;  
+     position: relative;
+ }   
+  
+ .accordian{
+     width: 95%;  
+ }
+ .accordion-item{ 
+     border-radius: 10pt;
+     margin-bottom: 10pt;
+     padding: 10pt;   
+     box-shadow : .5rem 5px 0.5rem white(0, 0, 0, 0.493) ;  
+     width: 100%;
+ } 
+
+ .accordion-item a{  
+    font-size: 1.6rem;
+    color: black;
+    text-decoration: none; 
+    width: 98%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    font-size: 12pt; 
+}  
+
+.form-control{  
+    position:absolute;
+    display: hidden;
+}
+
+.answer input{
+max-height: 0%;
+ width: 98%;   
+ position:relative;
+ color: black;
+}
+
+.answer input:focus{
+    max-height: 0%;
+     width: 95%;   
+     position:relative;
+     color: black;
+}
+
+.arrow{   
+    cursor: pointer;   
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1%; 
+}
+
+.arrow .link img{     
+    -webkit-transform:rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);   
+}
+ 
+ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    list-style: none;
+  }
+
+  /*Buttons*/
+
+  .buttons{ 
+    display: block; 
+    text-align: center;
+  }
+
+  .btn{
+      color: green;
+      border-color: green;
+      width: 90%;  
+      font-size: 8pt; 
+  }
+
+  #addMore{
+      margin-top: 2%; 
+  }
+ 
+ /* change color to white
+  ::-webkit-calendar-picker-indicator {
+    filter: invert(1); 
+    }  */  

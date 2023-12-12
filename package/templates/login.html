@@ -1,0 +1,43 @@
+{% extends "base.html" %} 
+{% block title %}Login{% endblock %}  
+
+{% block content %} 
+<form method="POST"> 
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
+    <h1 >SAVE OUR PLANET</h1>  
+     <h1  class ="text">CARBON FOOTPRINT CALCULATOR</h1> 
+    <p id="description">
+        <span>
+            What is your carbon footprint?
+        Managing your carbon emission is critical for fighting climate change. 
+        </span>
+        <br /> 
+        <span>
+            Calculate your impact in minutes. Learn how to tread more lightly on 
+            the Earth.
+        </span>  </p>   
+        <br />  
+    <body>
+        <div class="form-group" style="top:-20px"> 
+            <br />
+            <input type="email" class="form-control" id="email" name="email"   
+            style=border:2pxsolidwhite;background:transparent placeholder=" " autocomplete="off"/>  
+            <label for="name" class="label-name"> 
+                <span class="content-name">Enter Email</span>
+            </label> 
+        </div>   
+        <div class="form-group" style="top: -10px; bottom:10px">
+            <input type="password" class="form-control" id="pw" name="pw"   
+            style=border:2pxsolidwhite;background:transparent placeholder=" " autocomplete="off"/> 
+            <label for="name" class="label-name">
+                <span class="content-name">Enter Password</span>
+            </label>
+        </div>
+        <div class="row"> 
+            <button type="submit" class="btn btn-outline-primary" id="b2" border-radius=500>Log In</button>  
+            <button  onclick="location.href='sign-up'" type="button" class="btn btn-outline-primary" id="b1" border-radius=500
+            >Sign Up</button>
+        </div> 
+    </body> 
+</form>
+{% endblock %}

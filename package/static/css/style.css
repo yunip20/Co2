@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Open+Sans+Condensed:wght@700&family=PT+Sans&display=swap');
+#description{
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14pt; 
+    text-align: left; 
+    font-weight:lighter;
+    margin:0%;
+}
+h1{
+    color:white; 
+    font-family: 'PT Sans', sans-serif;
+    font-size: 40pt;  
+    margin: 0pt; 
+    padding:0%; 
+    font-weight:lighter;
+    margin-top:100px;
+} 
+#text { 
+    font-size: 20pt;  
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: lighter;
+    margin-top:-10pt;
+    margin-bottom: 20pt;
+    margin-left: 2pt;
+}  
+#text:hover { 
+    color:#a3da8d; }
+
+h1.animationtext{
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    width: auto;
+    display: inline-block;
+    font-size: 35pt;  
+    margin-bottom: 0pt;
+    margin-left: -2pt;
+     
+} 
+
+h1.text{
+    color: #a3da8d;
+    font-family: 'Open Sans Condensed', sans-serif;
+    width: auto;
+    display: inline-block;
+    font-size: 35pt;  
+    margin: 0; 
+    margin-bottom: 5pt; 
+    font-weight: lighter;
+    animation: animated-text 7s steps(50, end),
+    animted-cursor 0.8s step-end infinite;
+    white-space: nowrap;
+    border-right: .1em solid #a3da8d;
+    overflow:hidden; 
+} 
+
+@keyframes animated-text {
+    from {
+          max-width: 0;
+    }
+    to {
+          max-width: 100%;
+    }
+} 
+@keyframes animted-cursor {
+    from,to {
+          border-right-color: #a3da8d;
+    }
+    50%{
+          border-right-color: transparent;
+    }
+} 
+h1:hover, #description:hover{
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out; 
+    transition: all 500ms ease-in-out; 
+    color: #a3da8d; 
+}
+h1, #description {  
+    -webkit-transition: all 500ms  ease-out;
+    -moz-transition: all 500ms  ease-out;
+    -o-transition: all 500ms  ease-out;
+    -ms-transition: all 500ms  ease-out;
+    transition: all 500ms  ease-out;
+} 
+body {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.3), 
+    rgba(0, 0, 0, 0.3)
+  ), url(../img/leaves.jpg);
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-size: cover;
+}
+.row button{
+    width:10%;
+    margin-left:1%; 
+    margin-top:2%;
+    display: inline-block;
+    vertical-align: top;
+}   
+
+.btn.btn-outline-primary{
+    color:white; 
+    border-color:white;  
+    border-radius: 30px; 
+} 
+
+.btn.btn-outline-primary:hover{
+    background-color: transparent;
+    border-color: #a3da8d;
+} 
+    
+input[type="email"], input[type="text"], input[type="password"]{
+    font-size: 14px;
+    font-family: 'PT Sans', sans-serif;   
+    background:none;
+}
+ 
+.form-group input:focus{  
+    background: none; 
+    color:white;  
+    box-shadow: none;
+}  
+.form-group{ 
+    position:relative;  
+}
+.form-group input{ 
+    border: none;  
+    color:white;  
+    margin-top: 20px;
+    margin-bottom: 30px; 
+} 
+
+.form-group label{
+    position:absolute;  
+    top: 0.5px;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height:100%; 
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 13pt;
+    pointer-events: none;
+    border-bottom:1px solid white;
+}
+.form-group label::after{
+    content:"";
+    position:absolute;
+    left:0px; 
+    display:block;
+    bottom: -1px;
+    width: 100%;
+    height:100%; 
+    border-bottom:white 1px solid; 
+    transform: scale(0,1);
+}
+
+.content-name{
+    position:absolute;
+    bottom:5px;
+    left:0px; 
+    transition:all 0.3s ease; 
+}
+
+.form-group input:focus +.label-name .content-name,
+.form-group input:not(:placeholder-shown)  +.label-name .content-name{
+    transform:translateY(-150%);
+    font-size: 16px;
+    color:#a3da8d;
+}
+.form-group input:focus +.label-name::after,
+.form-group input:not(:placeholder-shown)  +.label-name::after{
+    border-bottom:#a3da8d 1px solid;
+    transform: scale(1, 1);
+    transform-origin: 0% 100%; 
+    transition: transform 0.8s ease;
+}
+ 

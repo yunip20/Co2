@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}  
+    <link rel="stylesheet" type="text/css" href="../static/css/style2.css"/> 
+    </style>
+    <body>  
+      <div class="word">
+        <span id="first"> Welcome Back, </span> 
+      </div> 
+      <div class ="word-name">   
+        <label id="second">{{current_user.first_name}}</label>
+      </div>
+      <div class="row">
+        <label  class="label-bt" id="make" >
+          <a href="/forms"><span class=content-name>Create New Report</span></a> </label>  
+          <label class="label-bt" id="view" >
+            <a href="forms.html"> <span class=content-name>View Past Report</span></a> </label>  
+          </label>  
+          <label class="label-bt" id="view" >
+            <a href="forms.html"> <span class=content-name>Edit Past Report</span></a> </label>  
+          </label>  
+          <label class="label-bt" id="setting" >
+            <a href="https://www.nytimes.com/guides/year-of-living-better/how-to-reduce-your-carbon-footprint"><span class=content-name>Reduce Carbon Footprint | NYTimes</span></a> </label>  
+          </label>  
+          <label class="label-bt" id="setting" >
+            <a href="https://www.youtube.com/watch?v=PeYJTluQ5tM"><span class=content-name>Can We Cool the Planet? | PBS</span></a> </label>  
+          </label>  
+          <label class="label-bt" id="setting" >
+            <a href="https://www.youtube.com/watch?v=aETNYyrqNYE&list=PL7rb3uMaYmjHqT_JUcQYCBa4nEtfDKuSa"><span class=content-name>Our Planet| Netflix | WWF </span></a> </label>  
+          </label>    
+          <label class="label-bt" id="view" >
+            <a href="forms.html"> <span class=content-name>Settings</span></a> </label>  
+          </label>  
+          <label class="label-bt" id="logout" >
+            <a href="/logout"><span class=content-name>Log Out</span></a> </label>  
+          </label>  
+      </div>
+      <div class= "sound">
+        <span class="material-icons-outlined">
+          volume_up
+          </span>
+      </div> 
+    </body>
+     
+    {% endblock %}
